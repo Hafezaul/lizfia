@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+  
+    <title>Lizfia</title>
+    <!--CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--css-->
+	  <link rel="stylesheet" href="style.css">
+      <style>
+    article {
+    position: absolute;
+    inset: 50%;
+    translate: -50% -50%;
+    width: 100px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: Rotate 10s linear infinite;
+    z-index: 2;
+  
+    &:hover {
+      animation-play-state: paused;
+      cursor: pointer;
+    }
+    &::after {
+        content: "My Skills";
+        font-family: "Bona Nova SC", serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 1.5rem;
+      background: linear-gradient(to bottom, #0ACBF4, #FA0CF4);
+      border: 2px solid gold;
+      border-bottom: none;
+      background-clip: text;
+      color: transparent;
+    }
+    .itemsa {
+      position: absolute;
+      inset: 0;
+      transform: 
+        rotateY(calc((var(--position) - 1) * (360/var(--quantity)) * 1deg))
+        translateZ(250px);
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        center {
+          letter-spacing: .2rem;
+        }
+    }
+  }
+  @keyframes Rotate{
+    from {
+      transform: perspective(1000px) rotateX(-15deg) rotateY(0deg);
+    } to {
+      transform: perspective(1000px) rotateX(-15deg) rotateY(360deg);
+    }
+  }
+      </style>
+    
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+       <!--Snow ball rain-->
+<div class="snowfall" aria-hidden="true"></div>
+
+        <!--Content-->
+        <section class="papa">
+        <div class="container mx-auto">
+            <div class="flex flex-col items-center justify-center min-h-screen text-white">
+                <img class="imga w-full max-w-xs rounded-full mb-4" src="./img/hafidz.webp" alt="Faris Iskandar Hafidz">
+              
+                <h1 class="text-white text-center pt-2 text-2xl sm:text-3xl md:text-4xl">Faris Iskandar Hafidz</h1>
+                <p class="text-center text-white text-sm sm:text-base md:text-lg">Front End Developer</p>
+                
+                <a href="https://linktr.ee/hafzz11" target="_blank" class="bg-green-500 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-green-600 hover:shadow-xl transition-transform transform hover:scale-105 my-4">
+                  Follow Me
+                </a>
+              
+                <div class="flex justify-center items-center text-white space-x-6 mt-4">
+                  <a href="https://www.linkedin.com/in/farisiskandarhafidz/" class="flex items-center space-x-2 text-blue-600 hover:text-blue-700">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="https://www.instagram.com/al_hafidz_295/" class="flex items-center space-x-2 text-pink-500 hover:text-pink-600">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                  </a>
+                  <a href="https://github.com/Hafezaul" class="flex items-center space-x-2 text-white hover:text-gray-300">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Github</span>
+                  </a>
+                </div>
+              </div>
+        </div>
+        </section>
+        <br><br>
+        
+        <!--About me-->
+        <section id="mySelf" class="pt-4 text-dark-800">
+          <div class="container mx-auto">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <!-- Kolom 1 -->
+                  <div>
+                    <h2 class="text-2xl font-bold">About Me</h2>
+                    <p class="pt-2 text-left">
+                      I am a Junior Front End Developer who is passionate about creating visually appealing and user-friendly web interfaces. 
+                      I have a solid understanding and practical experience in HTML, CSS, JavaScript, and React. 
+                      I am proficient in modern CSS frameworks such as Tailwind CSS, Bootstrap, and Bulma, 
+                      and I have hands-on experience with Vue.js and Sass for creating dynamic, scalable, and maintainable web applications. 
+                      While I continuously strive to refine my skills and learn new technologies, 
+                      my current focus is on mastering advanced concepts in JavaScript and exploring the latest trends in front-end development.
+                    </p>
+                  </div>
+              
+                  <!-- Kolom 2 -->
+                  <div>
+                   <img src="./img/programming.svg" alt="Programming" class="w-full">
+                  </div>
+                </div>
+              </div>
+              
+
+          </div>
+        </section>
+        <br><br>
+        <hr>
+
+        <!--Skills laman-->
+        <br><br>
+        <div id="mySkills" class="relative text-white">
+            <section class="pt-40 pb-10">
+              <article id="rotating-article" style="--quantity: 7">
+                <div class="itemsa" style="--position: 1">
+                  <img src="https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png" alt="">
+                  <center>HTML</center>
+                </div>
+                <div class="itemsa" style="--position: 2">
+                  <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png" alt="">
+                  <center>CSS</center>
+                </div>
+                <div class="itemsa" style="--position: 3">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhe2_TjLuWzzjtoFkXUWq4A-HTZkRB-uDSHQ&s" alt="">
+                  <center>JavaScript</center>
+                </div>
+                <div class="itemsa" style="--position: 4">
+                  <img src="data:image/jpeg;base64,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" alt="">
+                  <center>Bootstrap</center>
+                </div>
+                <div class="itemsa" style="--position: 5">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZcLhROh5BO1CuZ3UE-1H_xE1eBqIZ1ht0yA&s" alt="">
+                  <center>TailwindCSS</center>
+                </div>
+                <div class="itemsa" style="--position: 6">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLPLQGezkpT1ntM2T0k3TR0yY75wevMpjLKA&s" alt="">
+                  <center>React Js</center>
+                </div>
+                <div class="itemsa" style="--position: 7">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvAz8bSMDxZvg1ZjElGs285z3WDhxMySLcA&s" alt="">
+                  <center>Vue Js</center>
+                </div>
+              </article>
+            </section>
+        </div>
+<br><br>
+
+        <!--Artikel laman-->
+    <section id="myBlog" class="pt-40"> 
+            <div class="container mx-auto">
+                <h1 class="text-left text-2xl font-bold">Blog</h1>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md p-4 relative">
+                      <h2 class="text-xl font-bold mb-2">Mengenal Apa Itu Product Manager</h2>
+                      <p class="text-gray-700 mb-4 text-left">Produk adalah segala sesuatu yang diciptakan melalui suatu proses dan memberikan manfaat di pasar. 
+                        Produk dapat berupa barang fisik ataupun tidak,</p>
+                      <br>
+                      <a class="absolute bottom-4 right-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition" href="artikel1.html">
+                        Read More
+                      </a>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md p-4 relative">
+                      <h2 class="text-xl font-bold mb-2">Mengenal Tailwindcss dan cara memakainya</h2>
+                      <p class="text-gray-700 mb-4 text-left">Tailwind CSS adalah sebuah framework CSS yang mengadopsi pendekatan <strong>utility-first</strong>,</p>
+                      <br>
+                      <a class="absolute bottom-4 right-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition" href=artikel2.html">
+                        Read More
+                      </a>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md p-4 relative">
+                      <h2 class="text-xl font-bold mb-2">Other</h2>
+                      <p class="text-gray-700 mb-4 text-left">If you are interested in my article you can visit my blog</p>
+                      <br>
+                      <a class="absolute bottom-4 right-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition" href="https://hafezaul.github.io/haliawrites/">
+                        Let's go!!
+                      </a>
+                    </div>
+                  </div>
+                  
+            </div>
+    </section>
+
+    <!--Footer laman-->
+
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="w-full p-4 md:py-8">
+          <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="https://instagram.com/al_hafidz_295" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Lizfia Dev</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+              <li>
+                <a href="#mySelf" class="hover:underline me-4 md:me-6">About</a>
+              </li>
+              <li>
+                <a href="#mySkills" class="hover:underline me-4 md:me-6">Skills</a>
+              </li>
+              <li>
+                <a href="#myBlog" class="hover:underline me-4 md:me-6">Blog</a>
+              </li>
+              <li>
+                <a href="https://wa.me/6285814957679" class="hover:underline">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://tailwindcss.com/" class="hover:underline">Tailwindcss</a>. All Rights Reserved.</span>
+        </div>
+      </footer>
+      
+          
+        
+          
+          <!-- Button -->
+          <button id="button-music" 
+            class="fixed bottom-4 right-4 bg-gray-800 text-white rounded-full p-4 shadow-md flex items-center justify-center">
+            <i id="icon-music" class="fas fa-pause"></i>
+          </button>
+          
+          <!-- Audio Element -->
+          <audio id="audio" src="./audio/sound.mp3" autoplay></audio>
+          
+    <script src="main.js"></script>
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+   <script>
+    AOS.init();
+   </script>
+
+</body>
+</html>

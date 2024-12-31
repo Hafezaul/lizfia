@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artikel Mengenal Tailwind CSS</title>
+  <!-- Link CDN Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Menambahkan gaya tambahan jika diperlukan */
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-500 p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#" class="text-white text-2xl font-bold">TailwindCSS</a>
+      <ul class="flex space-x-4">
+        <li><a href="#artikel" class="text-white">Artikel</a></li>
+        <li><a href="#instalasi" class="text-white">Instalasi</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Artikel Section -->
+  <section id="artikel" class="py-16 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-semibold mb-4">Mengenal Tailwind CSS</h1>
+      <p class="text-lg leading-relaxed mb-6">
+        Tailwind CSS adalah sebuah framework CSS yang mengadopsi pendekatan <strong>utility-first</strong>,
+        di mana pengembang dapat mendesain halaman web menggunakan <strong>kelas utilitas</strong> (utility classes)
+        yang sudah tersedia. Alih-alih menulis kode CSS kustom untuk setiap elemen, Tailwind CSS menyediakan berbagai
+        kelas utilitas yang dapat langsung digunakan dalam HTML untuk styling elemen.
+      </p>
+      <h2 class="text-3xl font-semibold mb-4">Fitur Utama dari Tailwind CSS</h2>
+      <ul class="list-disc pl-6 space-y-3 text-lg">
+        <li><strong>Utility-First:</strong> Tailwind CSS berfokus pada penggunaan kelas utilitas (seperti <code>p-4</code>, <code>bg-blue-500</code>, <code>text-white</code>) untuk mengatur styling langsung di elemen HTML.</li>
+        <li><strong>Kustomisasi yang Fleksibel:</strong> Tailwind memungkinkan penggunanya untuk menyesuaikan tema dan konfigurasi melalui file <code>tailwind.config.js</code>.</li>
+        <li><strong>Responsive Design:</strong> Tailwind menyediakan kelas untuk desain responsif, seperti <code>sm:</code>, <code>md:</code>, <code>lg:</code> untuk menyesuaikan tampilan di berbagai perangkat.</li>
+        <li><strong>Pemisahan Kode yang Efisien:</strong> Menghindari kode CSS yang tidak digunakan karena hanya kelas yang digunakan dalam HTML yang akan disertakan dalam file akhir setelah proses build.</li>
+        <li><strong>Penyederhanaan Proses Pengembangan:</strong> Banyaknya kelas utilitas yang tersedia memungkinkan pengembang untuk merancang antarmuka pengguna dengan cepat dan efisien.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Instalasi Tailwind Section -->
+  <section id="instalasi" class="bg-gray-200 py-16 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-4">Cara Menginstal Tailwind CSS</h2>
+      <p class="text-lg leading-relaxed mb-6">
+        Berikut adalah langkah-langkah instalasi Tailwind CSS dengan menggunakan HTML, CSS, JavaScript, dan Tailwind.
+        Instalasi ini menggunakan CDN, sehingga kamu tidak perlu men-download file apapun.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-4">Langkah-langkah Instalasi Tailwind CSS dengan CDN</h3>
+      <ol class="list-decimal pl-6 space-y-3 text-lg">
+        <li><strong>Tambahkan CDN Tailwind CSS:</strong> Cukup salin dan tempelkan link CDN berikut ke dalam <code>&lt;head&gt;</code> di file HTML kamu.</li>
+        <pre><code>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
+        <li><strong>Gunakan Kelas Tailwind di HTML:</strong> Setelah menambahkan CDN, kamu dapat langsung menggunakan kelas Tailwind di elemen HTML. Misalnya:</li>
+        <pre><code>&lt;div class="bg-blue-500 text-white p-6"&gt;Ini adalah contoh elemen dengan Tailwind CSS&lt;/div&gt;</code></pre>
+        <li><strong>Proses Selesai:</strong> Sekarang kamu sudah siap menggunakan Tailwind CSS dalam proyekmu tanpa perlu instalasi tambahan!</li>
+      </ol>
+    </div>
+  </section>
+
+  
+
+  <!-- JavaScript -->
+  <script>
+    // Script untuk interaksi tambahan jika diperlukan
+    console.log('Tailwind CSS dengan CDN telah berhasil di-load!');
+  </script>
+  
+</body>
+
+</html>
