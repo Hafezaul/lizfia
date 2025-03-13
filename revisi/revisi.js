@@ -15,7 +15,7 @@
         setTimeout(function() {
             loadingScreen.style.display = 'none';
         }, 500);
-    }, 3000); // 3000 ms = 3 detik
+    }, 2000); // 2000 ms = 2 detik
 });
 
 const words = ['Developer', 'Designer', 'Talib'];
@@ -38,7 +38,7 @@ function typeWord() {
             isDeleting = true;
             setTimeout(typeWord, 2000); // Tunggu sebelum mulai menghapus
         } else {
-            setTimeout(typeWord, 200); // Kecepatan mengetik
+            setTimeout(typeWord, 300); // Kecepatan mengetik
         }
     } else {
         // Menghapus
