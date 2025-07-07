@@ -34,7 +34,6 @@ Selamat datang di repositori resmi untuk website portofolio saya, **Lizfia**. We
 
 ## 🖼️ Cuplikan Tampilan
 
-> Tambahkan screenshot utama dari homepage, bagian portofolio, dll.
 
 ![Homepage Screenshot](./foto/homepage.png)
 
