@@ -41,6 +41,18 @@ body {
     transition: transform 0.15s ease;
 }
 
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .cursor,
+    .cursor-shadow {
+        display: none;
+    }
+    
+    body {
+        cursor: auto !important;
+    }
+}
+
 .container-fluid {
     padding: 0;
 }

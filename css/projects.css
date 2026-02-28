@@ -1,8 +1,16 @@
+:root {
+    --primary-color: #ff6347;
+    --secondary-color: #20B2AA;
+    --text-color: #333;
+    --bg-color: #fff;
+}
+
 body {
     cursor: none;
-    font-family: Arial, sans-serif;
-    padding-top: 20px;
-    padding-bottom: 70px; /* Add padding to prevent content from being hidden by fixed navbar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 70px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .cursor {
@@ -28,6 +36,18 @@ body {
     z-index: 9998;
     transform: translate(-50%, -50%);
     transition: transform 0.15s ease;
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .cursor,
+    .cursor-shadow {
+        display: none;
+    }
+    
+    body {
+        cursor: auto !important;
+    }
 }
 
 .header {
@@ -58,17 +78,20 @@ body {
 
 .category-button {
     border: none;
-    background-color: #e67e22;
+    background-color: var(--primary-color);
     color: white;
     padding: 8px 15px;
     border-radius: 20px;
     margin: 0 5px;
     cursor: pointer;
     transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(255, 99, 71, 0.3);
 }
 
 .category-button:hover {
-    background-color: #d35400;
+    background-color: #e05a40;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 99, 71, 0.4);
 }
 
 .section-title {
@@ -86,7 +109,7 @@ body {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #e67e22;
+    background-color: var(--primary-color);
 }
 
 .content-box {
@@ -103,17 +126,20 @@ body {
 }
 
 .action-button {
-    background-color: #e67e22;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 20px;
     padding: 8px 20px;
     margin: 5px;
     transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(255, 99, 71, 0.3);
 }
 
 .action-button:hover {
-    background-color: #d35400;
+    background-color: #e05a40;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 99, 71, 0.4);
 }
 
 .project-card {
@@ -170,7 +196,7 @@ body {
     white-space: nowrap;
     padding-bottom: 15px;
     scrollbar-width: thin;
-    scrollbar-color: #e67e22 #f0f0f0;
+    scrollbar-color: var(--primary-color) #f0f0f0;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -183,7 +209,7 @@ body {
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
-    background-color: #e67e22;
+    background-color: var(--primary-color);
     border-radius: 10px;
 }
 
@@ -191,76 +217,6 @@ body {
     display: inline-block;
     width: 250px;
     margin-right: 15px;
-}
-
-
-.navbar {
-    padding: 1.5rem 2rem;
-}
-
-        /* Slim hamburger button */
-.navbar-toggler {
-    border: none;
-    padding: 0.25rem 0;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-
-.navbar-toggler-icon {
-    background-image: none !important;
-    display: inline-block;
-    width: 24px;
-    height: 2px;
-    background-color: var(--text-color);
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    background-color: var(--text-color);
-    transition: all 0.3s ease;
-}
-
-.navbar-toggler-icon::before {
-    transform: translateY(-8px);
-}
-
-.navbar-toggler-icon::after {
-    transform: translateY(8px);
-}
-
-/* Offcanvas styles */
-.offcanvas {
-    width: 280px;
-    background-color: #f8f9fa;
-    border-left: 1px solid rgba(0,0,0,0.1);
-}
-
-.offcanvas-header {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.offcanvas-body .nav-link {
-    padding: 0.75rem 1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.offcanvas-body .nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: var(--primary-color);
-    transform: translateX(5px);
 }
 
         
@@ -286,34 +242,36 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    background-color: white;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 0.75rem 1.5rem;
     z-index: 1000;
 }
 
 .bottom-text {
     margin: 0;
-    font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .donate-btn {
-    background-color: #e67e22;
+    background-color: var(--primary-color);
     color: white;
     border: none;
-    border-radius: 20px;
-    padding: 8px 15px;
-    transition: all 0.3s;
-    font-size: 14px;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 99, 71, 0.3);
+    text-decoration: none;
     cursor: pointer;
 }
 
 .donate-btn:hover {
-    background-color: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 99, 71, 0.4);
 }
 
 /* Animations */

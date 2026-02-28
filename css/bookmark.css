@@ -36,6 +36,18 @@
             transition: transform 0.15s ease;
         }
 
+        /* Hide custom cursor on touch devices */
+        @media (hover: none) and (pointer: coarse) {
+            .cursor,
+            .cursor-shadow {
+                display: none;
+            }
+            
+            body {
+                cursor: auto !important;
+            }
+        }
+
         .navbar {
     padding: 1.5rem 2rem;
 }
@@ -111,34 +123,35 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #f8f9fa;
+            background-color: white;
+            padding: 0.75rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
 
         .bottom-text {
-            margin: 0;
             font-weight: 500;
+            margin: 0;
         }
 
         .donate-btn {
-            background-color: #ff6347;
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            border-radius: 20px;
-            padding: 6px 15px;
-            text-decoration: none;
-            font-size: 14px;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 500;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 99, 71, 0.3);
+            text-decoration: none;
         }
 
         .donate-btn:hover {
-            background-color: #e05a40;
             transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 99, 71, 0.4);
         }
 
         /* Bookmark icon */
@@ -169,45 +182,164 @@
 
         .bookmark-title {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        .bookmark-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #666;
+            font-size: 1.1rem;
         }
 
         /* Bookmark cards */
         .bookmark-card {
             position: relative;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
             margin-bottom: 20px;
             cursor: pointer;
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border: 2px solid transparent;
+            height: 100%;
         }
 
         .bookmark-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(255, 99, 71, 0.2);
+            border-color: var(--primary-color);
         }
 
         .bookmark-card .card-body {
-            padding: 20px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .bookmark-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .bookmark-card:hover .bookmark-icon-wrapper {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .bookmark-icon-wrapper i {
+            font-size: 28px;
+            color: white;
         }
 
         .bookmark-card h3 {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-weight: 600;
+            font-size: 1.15rem;
+            color: var(--text-color);
+            line-height: 1.4;
         }
 
-        .bookmark-card .view-link {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            color: #ff6347;
-            font-size: 20px;
+        .bookmark-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+
+        .bookmark-category {
+            display: inline-block;
+            background-color: rgba(255, 99, 71, 0.1);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .bookmark-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
         }
 
-        .bookmark-card .view-link:hover {
-            transform: scale(1.2);
-            color: #e05a40;
+        .bookmark-link:hover {
+            gap: 12px;
+            color: var(--secondary-color);
         }
+
+        .bookmark-link i {
+            font-size: 1rem;
+        }
+
+        
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 70px; /* Space for bottom navbar */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    max-width: 350px;
+    margin-bottom: 2rem;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}

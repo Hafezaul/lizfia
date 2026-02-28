@@ -1,0 +1,76 @@
+{
+  "bookmarks": [
+    {
+      "id": 1,
+      "title": "Suitable extensions to try to make coding more fun",
+      "description": "Let's try this extension in your IDE.",
+      "url": "https://www.tiktok.com/@halia_fiz/photo/7474768132054437125?is_from_webapp=1&sender_device=pc&web_id=7486042191304558098",
+      "category": "Tools",
+      "icon": "fa-puzzle-piece"
+    },
+    {
+      "id": 2,
+      "title": "Attack on Titan anime you must watch!",
+      "description": "Just entertainment from coding fatigue.",
+      "url": "https://www.youtube.com/playlist?list=PLPanbgyToztZJLy-bGH_tD6rA1ObhW7iz",
+      "category": "Entertainment",
+      "icon": "fa-play-circle"
+    },
+    {
+      "id": 3,
+      "title": "Learn UI/UX Designer Law",
+      "description": "Read this so you know about the laws in UI/UX design.",
+      "url": "https://lawsofux.com/",
+      "category": "Design",
+      "icon": "fa-palette"
+    },
+    {
+      "id": 4,
+      "title": "Learn a Code",
+      "description": "Create a WhatsApp Bot with JavaScript.",
+      "url": "https://youtu.be/SgW4IKDIqjY?si=5RIRS-JHfxId5oeI",
+      "category": "Coding",
+      "icon": "fa-code"
+    },
+    {
+      "id": 5,
+      "title": "Learning inspiration",
+      "description": "Ways to make learning effective.",
+      "url": "https://youtu.be/TjPFZaMe2yw?si=fXH_8Zl5dvl3n6hO",
+      "category": "Learning",
+      "icon": "fa-lightbulb"
+    },
+    {
+      "id": 6,
+      "title": "Learning Reference Resource",
+      "description": "The place where I grew up and learned a lot about coding :).",
+      "url": "https://docs.google.com/document/d/1I0J-7gGao6NqpEVlM4G6hpY8BvDFw_i9Q8M3POlLSEU/edit?usp=sharing",
+      "category": "Learning",
+      "icon": "fa-book"
+    },
+    {
+      "id": 7,
+      "title": "Learn a JavaScript for Beginner",
+      "description": "This is a note during my study.",
+      "url": "https://github.com/Hafezaul/learn-javascript",
+      "category": "Coding",
+      "icon": "fa-brands fa-js"
+    },
+    {
+      "id": 8,
+      "title": "A, I, U, E, O for everything!",
+      "description": "My notes on art and love.",
+      "url": "https://docs.google.com/document/d/1I2Mb0SjK73JXMFvi3lDUcHfwqy526em4siD_yp4GrBs/edit?usp=sharing",
+      "category": "Personal",
+      "icon": "fa-heart"
+    },
+    {
+      "id": 9,
+      "title": "Learn the basics in fire conditions.",
+      "description": "Steps to avoid panic in a fire.",
+      "url": "https://docs.google.com/document/d/1ny1jgLc4OToyJfF0qMV4l3-h5svkyjXUvvshqP27mic/edit?usp=sharing",
+      "category": "Safety",
+      "icon": "fa-fire-extinguisher"
+    }
+  ]
+}

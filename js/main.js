@@ -58,22 +58,26 @@
  const customAlert = document.querySelector('.custom-alert');
  const alertButton = document.querySelector('.alert-button');
 
- // Show alert after page loads
+ // Show alert only if user hasn't seen it before
  window.addEventListener('load', () => {
-     setTimeout(() => {
-         alertOverlay.classList.add('show');
-         customAlert.classList.add('show');
-     }, 1000);
+     if (!sessionStorage.getItem('alertShown')) {
+         setTimeout(() => {
+             alertOverlay.classList.add('show');
+             customAlert.classList.add('show');
+         }, 1000);
+     }
  });
 
  // Close alert when button is clicked
  alertButton.addEventListener('click', () => {
      alertOverlay.classList.remove('show');
      customAlert.classList.remove('show');
+     sessionStorage.setItem('alertShown', 'true');
  });
 
  // Close alert when overlay is clicked
  alertOverlay.addEventListener('click', () => {
      alertOverlay.classList.remove('show');
      customAlert.classList.remove('show');
+     sessionStorage.setItem('alertShown', 'true');
  });

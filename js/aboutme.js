@@ -19,7 +19,6 @@ document.addEventListener('mouseup', () => {
     cursorShadow.style.transform = 'translate(-50%, -50%) scale(1)';
 });
 
-// Add hover effect for links and buttons
 const interactiveElements = document.querySelectorAll('a, button');
 interactiveElements.forEach(element => {
     element.addEventListener('mouseenter', () => {
@@ -32,17 +31,14 @@ interactiveElements.forEach(element => {
         cursorShadow.style.transform = 'translate(-50%, -50%) scale(1)';
     });
 });
-// certification 
 
 function showCertificate(id) {
-    // Animate button
     const btn = event.target.closest('.show-btn');
     btn.style.transform = 'scale(0.95)';
     setTimeout(() => {
         btn.style.transform = '';
     }, 150);
     
-    // Your certificate display logic here
     if (id === 1) {
       const link = window.location.href = "https://www.codepolitan.com/c/86Q2D4N/";
         link.target = "_blank";
@@ -51,20 +47,36 @@ function showCertificate(id) {
     }
 }
 
-// Intersection Observer for scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
+const achievementObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.animationPlayState = 'running';
         }
     });
-}, observerOptions);
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
 
 document.querySelectorAll('.achievement-card').forEach(card => {
-    observer.observe(card);
+    achievementObserver.observe(card);
 });
+
+const skillsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const progressFills = entry.target.querySelectorAll('.progress-fill');
+            progressFills.forEach(fill => {
+                fill.style.width = fill.style.width;
+            });
+        }
+    });
+}, {
+    threshold: 0.3,
+    rootMargin: '0px'
+});
+
+const skillsSection = document.querySelector('.skills-grid');
+if (skillsSection) {
+    skillsObserver.observe(skillsSection);
+}
