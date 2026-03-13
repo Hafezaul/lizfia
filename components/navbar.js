@@ -10,7 +10,7 @@ class navbar extends HTMLElement {
             
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="../index.html" class="nav-link">
+                    <a href="lizfia.my.id" class="nav-link">
                         <i class="fas fa-home"></i>
                         <span>Home</span>
                     </a>
