@@ -4,31 +4,31 @@ class navbar extends HTMLElement {
     <link rel="stylesheet" href="../css/navbar.css">
      <nav class="modern-navbar">
         <div class="nav-container">
-            <a href="../index.html" class="nav-logo">
+            <a href="/" class="nav-logo">
                 <span class="logo-text">lizfia</span>
             </a>
             
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="../index.html" class="nav-link">
+                    <a href="/" class="nav-link">
                         <i class="fas fa-home"></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../pages/aboutme.html" class="nav-link">
+                    <a href="/pages/aboutme.html" class="nav-link">
                         <i class="fas fa-user"></i>
                         <span>About</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../pages/projects.html" class="nav-link">
+                    <a href="/pages/projects.html" class="nav-link">
                         <i class="fas fa-folder"></i>
                         <span>Projects</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../pages/bookmark.html" class="nav-link">
+                    <a href="/pages/bookmark.html" class="nav-link">
                         <i class="fas fa-bookmark"></i>
                         <span>Bookmark</span>
                     </a>
